@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos nove vijesti - Novinski Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <div class="site-branding">
+            <img src="images/stern_logo.png" alt="Stern Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.php">Početna</a></li>
+                <li><a href="administrator.php">Administracija</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="input-form-page">
+        <section class="form-section">
+            <h2>Unos nove vijesti</h2>
+            <form action="skripta.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Naslov vijesti:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Kratak sažetak vijesti:</label>
+                    <textarea id="summary" name="summary" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Tekst vijesti:</label>
+                    <textarea id="content" name="content" rows="15" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Kategorija:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Odaberite kategoriju</option>
+                        <option value="Politika">Politika</option>
+                        <option value="Zdravlje">Zdravlje</option>
+                        <option value="Društvo">Društvo</option>
+                        <option value="Ekonomija">Ekonomija</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Kultura">Kultura</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Odaberite sliku:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="display_on_homepage" name="display_on_homepage" value="yes">
+                    <label for="display_on_homepage">Prikaži obavijest na početnoj stranici</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Pošalji vijest</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Vijesti od 19.06.2025 | &copy; Tvoje Ime i Prezime, 2025.</p>
+        <p>Kontakt: <a href="mailto:tvoj.email@example.com">tvoj.email@example.com</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .site-branding img {
+    height: 30px; 
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000;
+}
+
+
+main {
+    max-width: 1200px; 
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-section h2 {
+    font-size: 2em;
+    color: #c00; 
+    border-bottom: 2px solid #c00;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.articles-grid article {
+    border: 1px solid #eee;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.articles-grid article img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    margin-bottom: 10px;
+}
+
+.articles-grid article .category-tag {
+    display: block;
+    font-size: 0.8em;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.articles-grid article h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.articles-grid article h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.articles-grid article h3 a:hover {
+    color: #c00;
+}
+
+.articles-grid article p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+footer {
+    background-color: #f8f8f8;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.article-page {
+    max-width: 800px; 
+}
+
+.article-page .category-breadcrumb {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    display: block; 
+}
+
+.article-page h1 {
+    font-size: 2.5em; 
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.article-page .article-intro {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.article-page figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.article-page figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.article-page figure figcaption {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.article-page p {
+    margin-bottom: 1em; 
+    text-align: justify; 
+}
+
+.article-page strong {
+    font-weight: bold;
+}
+
+.input-form-page {
+    max-width: 700px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-section {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-section h2 {
+    font-size: 2em;
+    color: #c00; 
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c00;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+.form-group textarea {
+    resize: vertical; 
+}
+
+.form-group input[type="file"] {
+    padding: 8px 0; 
+}
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-group.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; 
+}
+
+.form-group button[type="submit"] {
+    background-color: #c00; 
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: #a00; 
+}
+
+@media (max-width: 768px) {
+    .input-form-page {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+}

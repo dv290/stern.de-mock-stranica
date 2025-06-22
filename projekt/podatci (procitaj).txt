@@ -1,0 +1,12 @@
+LINKOVI:
+http://localhost/projekt/index.php
+http://localhost/projekt/index.html
+
+
+KORISNICI:
+
+user: DummyKorisnik1
+password: korisnik1
+
+user: Admin
+password: admin1
